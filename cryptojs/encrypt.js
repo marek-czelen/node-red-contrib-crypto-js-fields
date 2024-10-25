@@ -7,6 +7,7 @@ module.exports = function (RED) {
 		var node = this;
 		node.algorithm = config.algorithm;
 		node.key = config.key;
+		node.field = config.field
 
 		node.on('input', function (msg) {
 			// check configurations
@@ -15,11 +16,16 @@ module.exports = function (RED) {
 				node.error("Missing configuration, please check your algorithm or secret key.", msg);
 			} else {
 				// check the payload
-				if(msg.payload) {
+				var fieldsArray=node.field.split('.')
+				var item = msg
+				for (const fieldItem of fieldsArray) {
+					if (item.hasOwnProperty(fieldItem)) item = item[fieldItem]
+				}
+				if(item) {
 					// debugging message
 					node.debug('Encrypting payload using '+node.algorithm);
 					// encrypt with CryptoJS
-					msg.payload = CryptoJS[node.algorithm].encrypt(msg.payload, node.key).toString();
+					item = CryptoJS[node.algorithm].encrypt(item, node.key).toString();
 				} else {
 					// debugging message
 					node.trace('Nothing to encrypt: empty payload');
