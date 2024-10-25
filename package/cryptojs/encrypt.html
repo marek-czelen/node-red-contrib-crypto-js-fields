@@ -3,7 +3,7 @@
 		category: 'function',
 		color: '#a6bbcf',
 		defaults: {
-			name: {value: ''}, algorithm: {value: '', required: true}, key: {value: '', required: true}, field:{value: 'payload', required: true}
+			name: {value: ''}, algorithm: {value: '', required: true}, key: {value: '', required: true}, fieldname:{value: 'payload', required: true}
 		},
 		inputs: 1,
 		outputs: 1,
@@ -20,8 +20,8 @@
         <input type="text" id="node-input-name" placeholder="Name">
     </div>
     <div class="form-row">
-        <label for="node-input-field"><i class="icon-tag"></i> Field</label>
-        <input type="text" id="node-input-field" placeholder="Field">
+        <label for="node-input-fieldname"><i class="icon-tag"></i> Field</label>
+        <input type="text" id="node-input-fieldname" placeholder="Field">
     </div>
     <div class="form-row">
         <label for="node-input-algorithm"><i class="icon-tag"></i> Algorithm</label>
@@ -34,7 +34,7 @@
         </select>
     </div>
     <div class="form-row">
-        <label for="node-input-key"><i class="icon-tag"></i> Secret Key</label>
+        <label for="node-input-key"><i class="icon-tag"></i> Secret Key (password)</label>
         <input type="text" id="node-input-key" placeholder="Secret Key">
     </div>
 </script>
