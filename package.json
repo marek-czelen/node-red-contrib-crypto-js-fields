@@ -1,10 +1,10 @@
 {
-  "name": "node-red-contrib-crypto-js",
+  "name": "node-red-contrib-crypto-js-field",
   "version": "0.1.1",
   "description": "Node-RED nodes using CryptoJS to encrypt and decrypt messages",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/baumblatt/node-red-contrib-crypto-js.git"
+    "url": "git+https://github.com/marek-czelen/node-red-contrib-crypto-js-fields.git"
   },
   "scripts": {
     "test": "node-red"
@@ -12,12 +12,12 @@
   "keywords": [
     "node-red"
   ],
-  "author": "Bernardo Baumblatt",
+  "author": "Bernardo Baumblatt / Marek Czelen",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/baumblatt/node-red-contrib-crypto-js/issues"
+    "url": "https://github.com/marek-czelen/node-red-contrib-crypto-js-fields/issues"
   },
-  "homepage": "https://github.com/baumblatt/node-red-contrib-crypto-js#readme",
+  "homepage": "https://github.com/marek-czelen/node-red-contrib-crypto-js-fields#readme",
   "dependencies": {
     "crypto-js": "^3.1.9-1"
   },
