@@ -3,7 +3,11 @@
 		category: 'function',
 		color: '#a6bbcf',
 		defaults: {
-			name: {value: ''}, algorithm: {value: '', required: true}, key: {value: '', required: true}, fieldname:{value: 'payload', required: true}
+			name: {value: ''}, 
+            algorithm: {value: '', required: true}, 
+            key: {value: '', required: true}, 
+            iv:{value: '', required: true},
+            fieldname:{value: 'payload', required: true}
 		},
 		inputs: 1,
 		outputs: 1,
@@ -34,9 +38,13 @@
         </select>
     </div>
     <div class="form-row">
-        <label for="node-input-key"><i class="icon-tag"></i> Secret Key (password)</label>
+        <label for="node-input-key"><i class="icon-tag"></i> Secret Key</label>
         <input type="text" id="node-input-key" placeholder="Secret Key">
     </div>
+    <div class="form-row">
+        <label for="node-input-iv"><i class="icon-tag"></i> IV</label>
+        <input type="text" id="node-input-iv" placeholder="IV">
+    </div>    
 </script>
 
 <script type="text/x-red" data-help-name="encrypt">
